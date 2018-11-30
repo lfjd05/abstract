@@ -90,7 +90,7 @@ class AttentionSeq2Seq:
         self.vector_dim = 300   # 词向量的维度
 
     def define_full_model(self, vector=None):
-        encoder_input = Input(shape=(None,))
+        encoder_input = Input(shape=(self.n_input_len,))
         y_input = Input(shape=(None,))
 
         # encoder元件
